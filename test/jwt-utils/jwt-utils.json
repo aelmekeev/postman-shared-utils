@@ -1,0 +1,50 @@
+[
+  {
+    "desc": "Validates JWT token generated and signed with HmacSHA256.",
+    "data": "{\"sub\":\"1234567890\",\"name\":\"John Doe\",\"iat\":1516239022}",
+    "alg": "HS256",
+    "secret": "your-256-bit-secret",
+	"positive": true,
+	"result": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+  },
+  {
+    "desc": "Validates JWT token generated and signed with HmacSHA256 (different secret).",
+    "data": "{\"sub\":\"1234567890\",\"name\":\"John Doe\",\"iat\":1516239022}",
+    "alg": "HS256",
+    "secret": "my-test-secret",
+	"positive": true,
+	"result": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.rm6PpKoMyDmo6kY-ZgV1a2Oma5pC6BZOo1JBrRh48R4"
+  },
+  {
+    "desc": "Validates JWT token generated and signed with HmacSHA256 (different data).",
+    "data": "{\"sub\":\"1234567890\",\"name\":\"John Doe\",\"iat\":1234567890}",
+    "alg": "HS256",
+    "secret": "your-256-bit-secret",
+	"positive": true,
+	"result": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxMjM0NTY3ODkwfQ.1w8QHpfyUbFLXGHgAb0N5D4sj202zA3g8SF6JmDxg6Q"
+  },
+  {
+    "desc": "Validates JWT token generated and signed with HmacSHA384.",
+    "data": "{\"sub\":\"1234567890\",\"name\":\"John Doe\",\"iat\":1516239022}",
+    "alg": "HS384",
+    "secret": "your-384-bit-secret",
+	"positive": true,
+	"result": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.8aMsJp4VGY_Ia2s9iWrS8jARCggx0FDRn2FehblXyvGYRrVVbu3LkKKqx_MEuDjQ"
+  },
+  {
+    "desc": "Validates JWT token generated and signed with HmacSHA512.",
+    "data": "{\"sub\":\"1234567890\",\"name\":\"John Doe\",\"iat\":1516239022}",
+    "alg": "HS512",
+    "secret": "your-512-bit-secret",
+	"positive": true,
+	"result": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ._MRZSQUbU6G_jPvXIlFsWSU-PKT203EdcU388r5EWxSxg8QpB3AmEGSo2fBfMYsOaxvzos6ehRm4CYO1MrdwUg"
+  },
+  {
+    "desc": "Validates error during generation of JWT token with unsupported RSA256.",
+    "data": "{\"sub\":\"1234567890\",\"name\":\"John Doe\",\"iat\":1516239022}",
+    "alg": "RSA256",
+    "secret": "your-512-bit-secret",
+	"positive": false,
+	"result": "Not able to sign token with RSA256"
+  }
+]

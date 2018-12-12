@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "f87c3fdb-0cda-4667-94a5-39b5e2824988",
+		"name": "postman-shared-utils",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "postman-shared-utils",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "730c7821-a4c6-4488-bd7c-ec701751323b",
+						"exec": [
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "35054317-e508-4286-9e0d-56cc783158eb",
+						"exec": [
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://ya.ru",
+					"protocol": "https",
+					"host": [
+						"ya",
+						"ru"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "fe59cd9f-5043-452c-8191-55f11692edef",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d39432b9-f781-48be-a5dd-9ec25b876ec9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
