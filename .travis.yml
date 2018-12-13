@@ -3,6 +3,7 @@ node_js:
   - "lts/*"
 
 before_script:
-  - node --version
-  - npm --version
   - node_modules/.bin/newman --version
+  
+script:
+  - node test/run-tests.js
