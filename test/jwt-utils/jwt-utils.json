@@ -12,7 +12,7 @@
     "data": "{\"sub\":\"1234567890\",\"name\":\"John Doe\",\"iat\":1516239022}",
     "alg": "HS256",
     "secret": "my-test-secret",
-	"positive": true,
+	"positive": false,
 	"result": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.rm6PpKoMyDmo6kY-ZgV1a2Oma5pC6BZOo1JBrRh48R4"
   },
   {
