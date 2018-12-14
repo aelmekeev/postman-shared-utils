@@ -79,9 +79,11 @@ function runTests(allUtils, hasFailures) {
     fs.unlinkSync(pathToCollection);
 
     // run tests for next utils
-    if (allUtils.length) runTests(allUtils, hasFailures);
-
-    // exit with error code after all collections run if there were failing tests
-    if (!allUtils.length && hasFailures) process.exit(1);
+    if (allUtils.length) {
+      runTests(allUtils, hasFailures);
+    } else {
+      // exit with error code after all collections run if there were failing tests
+      if (hasFailures) process.exit(1);
+    }
   });
 }
