@@ -18,7 +18,7 @@ runTests(utils, false);
  * Collection is saved as test/{@param utilsName}.postman_collection.json.
  *
  * @param utilsName name of utils to generate collection for
- * @returns {String} path to generated collection
+ * @returns {string} path to generated collection
  */
 function generateCollectionWithTests(utilsName) {
   let template = require(path.join(__dirname, 'postman-shared-utils.postman_collection.json'), 'utf-8');
@@ -38,7 +38,7 @@ function generateCollectionWithTests(utilsName) {
  * Processes file and returns array that can be inserted into postman collection json.
  *
  * @param pathToFile path to file to process
- * @returns {Array<String>} array for exec field of postman collection json
+ * @returns {Array<string>} array for exec field of postman collection json
  */
 function getPostmanExecFromFile(pathToFile) {
   const file = fs.readFileSync(pathToFile, 'utf-8');
