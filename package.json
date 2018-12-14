@@ -1,0 +1,24 @@
+{
+  "name": "postman-shared-utils",
+  "version": "1.0.0",
+  "description": "Shared utils for Postman collections",
+  "scripts": {
+    "test": "node test/run-tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donotello/postman-shared-utils.git"
+  },
+  "keywords": [
+    "postman"
+  ],
+  "author": "Aleksandr Elmekeev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/donotello/postman-shared-utils/issues"
+  },
+  "homepage": "https://github.com/donotello/postman-shared-utils#readme",
+  "devDependencies": {
+    "newman": "latest"
+  }
+}
