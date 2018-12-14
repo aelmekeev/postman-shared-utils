@@ -4,6 +4,3 @@ node_js:
 
 before_script:
   - node_modules/.bin/newman --version
-  
-script:
-  - node test/run-tests.js
