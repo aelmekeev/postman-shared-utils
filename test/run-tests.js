@@ -28,13 +28,11 @@ function processFileLineByLine(path) {
   return result;
 }
 
-let hasFailures = false;
-
-fs.readdirSync(path.join(__dirname, '..', 'utils')).forEach(file => {
+function runUtilsTestsOneByOne(file, allUtils, hasFailures) {
   const utilsName = file.replace(/\.js$/, '');
-  
+
   generateCollection(utilsName);
-  
+
   const testData = require(path.join(__dirname, utilsName, `${utilsName}.json`));
   newman.run({
     collection: require(path.join(__dirname, '.', `${utilsName}.postman_collection.json`)),
@@ -42,13 +40,16 @@ fs.readdirSync(path.join(__dirname, '..', 'utils')).forEach(file => {
     iterationData: testData,
     reporters: 'cli'
   }, (error, summary) => {
-    if (summary.run.stats.assertions.failed) {
-      hasFailures = true;
-    }
-  });
-  
-  // clean up generated collections
-  fs.unlinkSync(path.join(__dirname, `${utilsName}.postman_collection.json`));
-});
+    if (summary.run.stats.assertions.failed) hasFailures = true;
 
-if (hasFailures) process.exit(1);
+    // clean up generated collections
+    fs.unlinkSync(path.join(__dirname, `${utilsName}.postman_collection.json`));
+
+    if (allUtils.length) runUtilsTestsOneByOne(allUtils.shift(), allUtils, hasFailures);
+    if (!allUtils.length && hasFailures) process.exit(1);
+  });
+}
+
+const utils = fs.readdirSync(path.join(__dirname, '..', 'utils'));
+
+runUtilsTestsOneByOne(utils.shift(), utils, false);
