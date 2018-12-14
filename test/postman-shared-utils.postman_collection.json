@@ -35,11 +35,14 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://ya.ru",
+					"raw": "https://google.com/404",
 					"protocol": "https",
 					"host": [
-						"ya",
-						"ru"
+						"google",
+						"com"
+					],
+					"path": [
+						"404"
 					]
 				}
 			},
