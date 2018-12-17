@@ -39,6 +39,7 @@ Feel free to check other utilities for examples of documentation and tests.
 Tests are running each week with the latest version of newman.
 
 [![Build Status](https://travis-ci.com/donotello/postman-shared-utils.svg?branch=master)](https://travis-ci.com/donotello/postman-shared-utils)
+[![devDependencies Status](https://david-dm.org/donotello/postman-shared-utils/dev-status.svg)](https://david-dm.org/donotello/postman-shared-utils?type=dev)
 
 ## License
 
