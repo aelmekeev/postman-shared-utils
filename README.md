@@ -40,7 +40,10 @@ Tests are running each week with the latest version of newman.
 
 [![Build Status](https://travis-ci.com/donotello/postman-shared-utils.svg?branch=master)](https://travis-ci.com/donotello/postman-shared-utils)
 [![devDependencies Status](https://david-dm.org/donotello/postman-shared-utils/dev-status.svg)](https://david-dm.org/donotello/postman-shared-utils?type=dev)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdonotello%2Fpostman-shared-utils.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdonotello%2Fpostman-shared-utils?ref=badge_shield)
 
 ## License
 
 Postman Shared Utils is released under the [MIT License](https://opensource.org/licenses/MIT).
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdonotello%2Fpostman-shared-utils.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdonotello%2Fpostman-shared-utils?ref=badge_large)
